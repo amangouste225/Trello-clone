@@ -13,3 +13,18 @@ body,
 body {
   background-color: var(--dynamic-background-transparent);
 }
+
+button {
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+  appearance: none;
+
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+
+}

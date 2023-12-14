@@ -4,6 +4,10 @@
     --dynamic-text: hsl(0, 0%, 100%);
     --list-background: #101204;
     --list-text: #B6C2CF;
+    --list-hover-bg: #A6C5E229;
+    --card-background: #22272B;
+    --addList: #ffffff3d;
+    --addListHover: #A6C5E229
 }
 
 @tailwind base;
@@ -12,18 +16,18 @@
 
 @layer components {
     .cardContainer {
-        @apply my-4 p-[10px] cursor-pointer text-[14px] rounded-xl bg-[#22272B]
+        @apply my-3 p-[10px] cursor-pointer text-listText text-[14px] rounded-xl bg-cardBackground
     }
 
     .columnTitle {
-        @apply font-bold text-[18px] px-3
+        @apply font-bold text-[18px] px-3 text-listText
     }
 
     .columnContainer {
-        @apply w-[300px] text-list_text p-3 mr-2 rounded-xl bg-list_background
+        @apply w-[300px] p-3 mr-2 rounded-xl bg-listBackground
     }
 
     .container {
-        @apply flex justify-start flex-row p-2 w-full
+        @apply flex items-start flex-row p-2 w-full
     }
 }
