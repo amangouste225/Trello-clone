@@ -7,7 +7,8 @@
     --list-hover-bg: #A6C5E229;
     --card-background: #22272B;
     --addList: #ffffff3d;
-    --addListHover: #A6C5E229
+    --addListHover: #A6C5E229;
+    --nexFormBtn: #579DFF
 }
 
 @tailwind base;
@@ -16,7 +17,7 @@
 
 @layer components {
     .cardContainer {
-        @apply my-3 p-[10px] cursor-pointer text-listText text-[14px] rounded-xl bg-cardBackground
+        @apply my-3 p-[10px] cursor-pointer text-listText text-[14px] rounded-xl bg-cardBackground hover:outline hover:outline-2 hover:outline-blue-400
     }
 
     .columnTitle {
@@ -28,6 +29,6 @@
     }
 
     .container {
-        @apply flex items-start flex-row p-2 w-full
+        @apply flex items-start flex-row p-2 w-screen
     }
 }
