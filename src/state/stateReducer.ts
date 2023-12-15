@@ -1,21 +1,22 @@
-import { findItemIndexById, moveItem } from "./../utlis/arrayUtils";
 import { Action } from "./action";
 import { nanoid } from "nanoid";
-import { findItemIndexById } from "../utlis/arrayUtils";
+import { findItemIndexById, moveItem } from "../utils/arrayUtils";
+import { DragItem } from "../dragItem";
 
-interface Tasks {
+export interface Task {
   text: string;
   id: string;
 }
 
-interface List {
+export interface List {
   id: string;
   text: string;
-  tasks: Tasks[];
+  tasks: Task[];
 }
 
-interface AppState {
+export interface AppState {
   lists: List[];
+  draggedItem: DragItem | null;
 }
 
 export const stateReducer = (
@@ -40,11 +41,20 @@ export const stateReducer = (
       });
       break;
     }
-    case "MOVE_LIST": {
-      const { draggedId, hoverId } = action.payload;
-      const dragIndex = findItemIndexById(draft.lists, draggedId);
-      const hoverIndex = findItemIndexById(draft.lists, hoverId);
-      draft.lists = moveItem(draft.lists, dragIndex, hoverIndex);
+    case "MOVE_LIST":
+      {
+        const { draggedId, hoverId } = action.payload;
+        const dragIndex = findItemIndexById(draft.lists, draggedId);
+        const hoverIndex = findItemIndexById(draft.lists, hoverId);
+        draft.lists = moveItem(draft.lists, dragIndex, hoverIndex);
+      }
+      break;
+    case "SET_DRAGGED_ITEM": {
+      draft.draggedItem = action.payload;
+      break;
+    }
+    default: {
+      break;
     }
   }
 };
