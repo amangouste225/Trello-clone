@@ -1,3 +1,4 @@
+import { findItemIndexById, moveItem } from "./../utlis/arrayUtils";
 import { Action } from "./action";
 import { nanoid } from "nanoid";
 import { findItemIndexById } from "../utlis/arrayUtils";
@@ -38,6 +39,12 @@ export const stateReducer = (
         text,
       });
       break;
+    }
+    case "MOVE_LIST": {
+      const { draggedId, hoverId } = action.payload;
+      const dragIndex = findItemIndexById(draft.lists, draggedId);
+      const hoverIndex = findItemIndexById(draft.lists, hoverId);
+      draft.lists = moveItem(draft.lists, dragIndex, hoverIndex);
     }
   }
 };
