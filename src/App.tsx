@@ -8,15 +8,17 @@ function App() {
   const { lists, dispatch } = useAppState();
 
   return (
-    <main>
-      {lists.map((list) => (
-        <Column text={list.text} key={list.id} id={list.id} />
-      ))}
-      <AddNewItems
-        toggleText="+ Add another list"
-        onAdd={(text) => dispatch(addList(text))}
-      />
-    </main>
+    <div>
+      <main>
+        {lists.map((list) => (
+          <Column text={list.text} key={list.id} id={list.id} />
+        ))}
+        <AddNewItems
+          toggleText="+ Add another list"
+          onAdd={(text) => dispatch(addList(text))}
+        />
+      </main>
+    </div>
   );
 }
 
