@@ -16,7 +16,7 @@ export const NewItemForm = ({ onAdd }: NewItemFormProps) => {
   return (
     <form
       onSubmit={() => onAdd(text)}
-      className="w-[280px] flex p-3 flex-col gap-3 transform ease-in-out duration-700  items-start bg-listBackground rounded-lg"
+      className="min-w-[300px] w-[300px] flex p-3 flex-col gap-3 transform ease-in-out duration-700  items-start bg-listBackground rounded-lg"
     >
       <input
         ref={inputRef}

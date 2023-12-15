@@ -5,7 +5,7 @@ interface AddListAction {
 
 interface AddTaskAction {
   type: "ADD_TASK";
-  payload: { type: string; listId: string };
+  payload: { text: string; listId: string };
 }
 
 export type Action = AddListAction | AddTaskAction;

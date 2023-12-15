@@ -3,8 +3,8 @@ import { nanoid } from "nanoid";
 import { findItemIndexById } from "../utlis/arrayUtils";
 
 interface Tasks {
-  id: string;
   text: string;
+  id: string;
 }
 
 interface List {

@@ -22,10 +22,10 @@ export const AddNewItems = ({ toggleText, dark, onAdd }: AddNewItemProps) => {
 
   return (
     <div
-      className={`max-w-[300px] p-[10px] font-bold cursor-pointer text-[14px] rounded-xl ${
+      className={`min-w-[280px] p-[10px] font-bold cursor-pointer text-[14px] rounded-xl mr-3 pr-4 ${
         dark
           ? "bg-transparent hover:bg-listHover"
-          : "w-[300px] bg-addList text-white hover:bg-addListHover"
+          : "w-[280px] min-w-[280px] h-[55px] flex items-center bg-addList text-white hover:bg-addListHover"
       } text-listText`}
       onClick={() => setShowForm(true)}
     >

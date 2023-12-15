@@ -25,10 +25,10 @@
     }
 
     .columnContainer {
-        @apply w-[300px] p-3 mr-2 rounded-xl bg-listBackground
+        @apply min-w-[300px] w-[300px] block p-2 mr-3 rounded-xl bg-listBackground overflow-visible
     }
 
-    .container {
-        @apply flex items-start flex-row p-2 w-screen
+    main {
+        @apply flex items-start flex-row p-3 w-screen overflow-visible
     }
 }

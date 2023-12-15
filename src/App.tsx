@@ -8,7 +8,7 @@ function App() {
   const { lists, dispatch } = useAppState();
 
   return (
-    <div className="container">
+    <main>
       {lists.map((list) => (
         <Column text={list.text} key={list.id} id={list.id} />
       ))}
@@ -16,7 +16,7 @@ function App() {
         toggleText="+ Add another list"
         onAdd={(text) => dispatch(addList(text))}
       />
-    </div>
+    </main>
   );
 }
 
