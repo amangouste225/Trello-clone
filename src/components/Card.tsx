@@ -4,5 +4,5 @@ interface CardProps {
 }
 
 export const Card = ({ text }: CardProps) => {
-  return <div className="cardContainer"> {text} </div>;
+  return <div className={`cardContainer`}>{text} </div>;
 };

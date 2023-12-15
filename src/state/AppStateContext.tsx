@@ -9,31 +9,25 @@ const appData: AppState = {
   lists: [
     {
       id: "0",
-      text: "To Do",
+      text: "Next Meeting",
       tasks: [
         {
           id: "0",
-          text: "Wahou! Incroyable! Une checklist! Vous pouvez créer une liste de tâches",
+          text: "Astuce Trello: 🌊 Ajoutez vos questions et sujets à aborder pour ne plus rien oublier",
+        },
+        {
+          id: "1",
+          text: "Qui peut m'aider à résoudre mon problème HTML d'alignement de texte?",
         },
       ],
     },
     {
       id: "1",
-      text: "In Progress",
+      text: "Ressources Project",
       tasks: [
         {
           id: "1",
-          text: "Learn Typescript with React JS from MasterClass 2023",
-        },
-      ],
-    },
-    {
-      id: "3",
-      text: "Done",
-      tasks: [
-        {
-          id: "2",
-          text: "Wahou! Incroyable! Une checklist! Vous pouvez créer une liste de tâches",
+          text: "Chronogramme du projet 'La perfection du travail en équipe'",
         },
       ],
     },

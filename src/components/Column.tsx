@@ -6,12 +6,13 @@ import { useRef } from "react";
 import { useItemDrag } from "../utils/useItemDrag";
 import { throttle } from "throttle-debounce-ts";
 import { useDrop } from "react-dnd";
+import { isHidden } from "../utils/isHidden";
 
 interface ColumnProps {
   text: string;
   id: string;
+  isHidden?: boolean;
 }
-
 export const Column = ({ text, id }: ColumnProps) => {
   const { getTaskByListId, dispatch, draggedItem } = useAppState();
   const tasks = getTaskByListId(id);
@@ -35,7 +36,10 @@ export const Column = ({ text, id }: ColumnProps) => {
   drag(drop(ref));
 
   return (
-    <div className="columnContainer" ref={ref}>
+    <div
+      className={`columnContainer ${isHidden ? "opacity-100" : "opacity-10"}`}
+      ref={ref}
+    >
       <div className="columnTitle">{text} </div>
       {tasks.map((task) => (
         <Card text={task.text} key={task.id} id={task.id} />
